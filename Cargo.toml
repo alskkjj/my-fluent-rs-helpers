@@ -2,6 +2,11 @@
 name = "my-fluent-rs-helper"
 version = "0.1.0"
 edition = "2024"
+description = "A library designed to simplify the usage of fluent-rs."
+license = "MIT"
+license-file = "LISCENSE"
+keywords = ["international", "i18n", "localize", "localization"]
+categories = ["internationalization"]
 
 [dependencies]
 fluent = "0.16.1"
