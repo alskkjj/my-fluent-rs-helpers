@@ -1,0 +1,10 @@
+[package]
+name = "my-fluent-rs-helper"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+fluent = "0.16.1"
+intl-memoizer = "0.5.2"
+sys-locale = "0.3.2"
+unic-langid = { version = "0.9.5", features = ["unic-langid-macros"] }
