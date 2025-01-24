@@ -242,7 +242,6 @@ where F: FnOnce() -> FluentValue<'a>{
     build_language(msg_key, args_pairs)
 }
 
-
 pub fn build_language<'a>(msg_key: &str, args_pairs: Vec<(&str, FluentValue)>) -> String {
     if let Ok(bs) = LANG.get().expect("MFH: Uninitialized language bundle.").lock() {
         let msg = bs
@@ -267,6 +266,12 @@ pub fn build_language<'a>(msg_key: &str, args_pairs: Vec<(&str, FluentValue)>) -
     }
 }
 
+
+///
+/// run before use any build_language_* functions
+/// if desired_lang is None, use the sys_locale::get_locale function.
+/// if lang_dir is None, use the dir [`i18n/fluent`]
+///
 pub fn init_lang(desired_lang: Option<String>, lang_dir: Option<String>) {
     if LANG
         .set(Mutex::new(
