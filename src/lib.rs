@@ -179,6 +179,7 @@ impl LanguageSystem {
     }
 }
 
+
 pub fn build_language_0<'a>(msg_key: &str) -> String {
     match LANG.get()
         .expect("MFH: Uninitialized language bundle.").lock() {
